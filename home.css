@@ -1,6 +1,7 @@
 :root{
     --background: rgb(236, 255, 253);
     --navbar: rgba(0, 0, 0, 0.3);
+    --accent: #ABFA08;
 }
 
 @font-face{
@@ -45,6 +46,7 @@ header nav .vbar {
 header nav .logo img{
     height: 50px;
     border-radius: 50%;
+    box-shadow: 0 0 10px;
 }
 
 header nav ul {
@@ -64,7 +66,8 @@ header nav ul li a{
 
 
 header nav ul li a:hover ,header nav ul li a:focus{
-    color: var(--navbar);
+    color: var(--accent);
+    filter: drop-shadow(0 0 5px var(--accent));
 }
 
 main h1{
@@ -90,7 +93,7 @@ main h1:hover{
 }
 
 main .main{
-    height: 85vh;
+    height: 80vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -103,8 +106,49 @@ main .main .div1{
     height: 75vh;
     border-radius: 10px;
     border-style: solid;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+main .main .div1 img{
+    width: 375px;
+    transition: 0.5s;
+}
+
+main .main .div1 img:hover{
+    filter: drop-shadow(0px 0px 2px var(--accent));
+    transition: 0.5s;
+}
+
+main .main .div1 button{
+    background-color: black;
+    color: white;
+    font-size: 1.5em;
+    padding: 5px;
+    border-radius: 5px;
+    border-style: none;
+    transition: 0.2s;
+    border-style: solid;
+    transition: 1s;
+}
+
+main .main .div1 button:hover,main .main .div1 button:focus{
+    background-color: white;
+    color: black;
+    filter: drop-shadow(5px 5px 0px var(--accent));
+    border-style: solid;
+    transition: 0.5s;
 
 }
+
+main .main .div1 button:active{
+    filter: drop-shadow(0 0 10px var(--accent));
+    transition: 0.01s;
+}
+
 main .main .div2 img{
     width:35vw;
 }
