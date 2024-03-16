@@ -1,0 +1,196 @@
+:root{
+    --background: #141415;
+    --navbar: rgb(137, 137, 137);
+    --accent: #ABFA08;
+    --grad: linear-gradient(
+        45deg,
+        rgb(137, 137, 137),
+        #141415
+        );
+}
+
+@font-face{
+    font-family: SilkScreen-Bold;
+    src: url(./Silkscreen-Bold.ttf);
+}
+
+@font-face{
+    font-family: smarn;
+    src: url(./SAMARN__.TTF);
+}
+
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header{
+    background-image: url(./wallpapersden.com_turquoise-liquid-art_3840x2160.jpg);
+    background-position: center;
+    background-size: cover;
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: var(--accent);
+}
+
+header nav{
+    width: 95vw;
+    margin: 0 auto;
+    /* background-color: var(--navbar); */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+header nav .vbar {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 2px;
+    height: 30px;
+    border-radius: 2px;
+}
+
+header nav .logo img{
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px white;
+}
+
+header nav ul {
+    /* background-color: aqua; */
+    width: 15vw;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around
+}
+
+header nav ul li a{
+    font-size: 22px;
+    color: white;
+}
+
+
+
+header nav ul li a:hover ,header nav ul li a:focus{
+    color: var(--accent);
+    filter: drop-shadow(0 0 5px var(--accent));
+}
+
+
+main h1{
+    padding-top: 5px;
+    width: 100%;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    font-family: smarn;
+}
+
+main h1 em {
+    margin-right: 17px;
+    margin-bottom: 7px;
+    font-family: SilkScreen-Bold;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 0px var(--accent);
+}
+
+main h1:hover{
+    letter-spacing: 10px;
+    transition: 0.5s;
+}
+
+main .main{
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+main .main .div1{
+    background-image: var(--grad);
+    background-position: left;
+    background-size: 800%;
+    /* background-color: antiquewhite; */
+    width: 400px;
+    height: 75vh;
+    border-radius: 10px;
+
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    animation: d 20s infinite alternate;
+}
+
+@keyframes d{
+    0% {background-position: left;}
+    100% {background-position: right;}
+}
+
+main .main .div1 img{
+    width: 375px;
+    transition: 0.5s;
+    color: white;
+}
+
+/* main .main .div1 img:hover{
+    filter: drop-shadow(0px 0px 2px var(--accent));
+    transition: 0.5s;
+} */
+
+main .main .div1 button{
+    background-color: black;
+    color: white;
+    font-size: 1.5em;
+    padding: 5px;
+    border-radius: 5px;
+    border-style: none;
+    transition: 0.2s;
+    border-style: solid;
+    transition: 1s;
+}
+
+main .main .div1 button:hover,main .main .div1 button:focus{
+    background-color: white;
+    color: black;
+    filter: drop-shadow(5px 5px 0px var(--accent));
+    border-style: solid;
+    transition: 0.5s;
+
+}
+
+main .main .div1 button:active{
+    filter: drop-shadow(0 0 10px var(--accent));
+    transition: 0.01s;
+}
+
+main .main .div2{
+    background-image: url(./assets/193957-deep-learning-wallpaper.gif);
+    background-position: right;
+    background-size: cover;
+    height: 75vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .main .div2 img{
+    width:35vw;
+    /* filter: drop-shadow(0 0 10px var(--accent)); */
+}
+
